@@ -52,6 +52,11 @@ button,
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
+.host {
+  text-align: center;
+  color: #308db8;
+}
+
 .sefind {
   border-radius: 25px;
 }
