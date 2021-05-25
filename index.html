@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Regular Persons</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/face.css" />
+    <script
+      src="https://kit.fontawesome.com/50ad5ce11e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <form id="search-form" class="text-center">
+          <input
+            type="search"
+            placeholder="🔍 search city..."
+            id="search-city-input"
+          />
+          <input type="submit"
+          value = "Find"
+          />
+          <input type="button" value="My Location" id= "geoLocation"/>
+      </form>
+
+      <section class="weather-data">
+        <div class="data-location">
+          <h1>
+            CALGARY
+            <small><i class="fas fa-map-marker-alt pinpoint"></i></small>
+          </h1>
+          <h2>Saturday, April 14, 2021</h2>
+          <h3>#</h3>
+          <h4>
+            <small>mostly cloudy</small><br />
+          </h4>
+        </div>
+
+        <div class="five-days">
+          <div class="row">
+            <div class="col-2">
+              Day
+              <br />
+              <small>Forecast</small>
+              <br />
+              <small>high/low</small>
+            </div>
+            <div class="col-2">
+              Sun
+              <br />
+              <i class="far fa-snowflake snowy"></i>
+              <br />
+              3° -3°
+            </div>
+            <div class="col-2">
+              Mon
+              <br />
+              ⛅
+              <br />
+              6° -4°
+            </div>
+            <div class="col-2">
+              Tue
+              <br />
+              <i class="fas fa-sun sunny"></i>
+              <br />
+              12° -1°
+            </div>
+            <div class="col-2">
+              Wed
+              <br />
+              ⛅
+              <br />
+              17° 1°
+            </div>
+            <div class="col-2">
+              Thu
+              <br />
+              <i class="far fa-snowflake snowy"></i>
+              <br />
+              3° -4°
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="explore">
+        <button class="calendar">Calendar 📅</button>
+        <button class="calendar">Discover Indoors 🏠</button>
+        <button class="calendar">Explore Outdoors🗻</button>
+      </section>
+
+      <section class="task-data">
+        <div class="clear-fix">
+        <div style="float: left">
+            <div class="to-do">
+              <form>
+                <label for="tasks"><strong>To-Do List:</strong></label>
+                <br />
+                <input type="text" placeholder="Enter task here" />
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-minus-square"></i>
+                <br />
+                <input type="text" placeholder="Enter task here" />
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-minus-square"></i>
+                <br />
+                <input type="text" placeholder="Enter task here" />
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-minus-square"></i>
+              </form>
+            </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="task-data">
+        <div class="clear-fix">
+        <div style="float: right">
+            <div class="to-go">
+              <form>
+                <label for="tasks"><strong>Reminders:</strong></label>
+                <br />
+                <input type="text" placeholder="Enter appointment here" />
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-minus-square"></i>
+                <br />
+                <input type="text" placeholder="Enter appointment here" />
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-minus-square"></i>
+                <br />
+                <input type="text" placeholder="Enter appointment here" />
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-minus-square"></i>
+              </form>
+            </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <script src="src/move.js"></script>
+  </body>
+</html>
