@@ -4,20 +4,8 @@ body {
   background-attachment: fixed;
 }
 
-h1,
-h2,
 h3 {
   text-align: center;
-}
-
-h1 {
-  font-size: 30px;
-  line-height: 7px;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 16px;
 }
 
 h3 {
@@ -61,6 +49,28 @@ button,
   text-align: center;
 }
 
+.weatherPannel {
+  list-style: none;
+}
+
+.city {
+  font-size: 30px;
+  line-height: 7px;
+  text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 16px;
+  text-align: center;
+}
+
+.temperature {
+  font-weight: bold;
+  font-size: larger;
+}
 .snowy {
   color: #44d7eb;
 }

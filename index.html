@@ -29,7 +29,7 @@
           <input
             type="search"
             placeholder="🔍 search city..."
-            id="search-city-input"
+            id="search-city"
           />
           <input type="submit"
           value = "Find"
@@ -38,16 +38,15 @@
       </form>
 
       <section class="weather-data">
-        <div class="data-location">
-          <h1>
-            CALGARY
-            <small><i class="fas fa-map-marker-alt pinpoint"></i></small>
-          </h1>
-          <h2>Saturday, April 14, 2021</h2>
-          <h3>#</h3>
-          <h4>
-            <small>mostly cloudy</small><br />
-          </h4>
+        <div class="data-location" clear-fix>
+        <ul class = "weatherPannel">
+            <li class="city mb-2"id="city"></li>
+            <li class="time mt-2" id="time"></li>
+            <li class="temperature"id="temperature"></li>
+            <li id="description"></li>
+            <li id="wind-speed"></li>
+            <li class="humidity">%</li>
+        </ul>
         </div>
 
         <div class="five-days">
@@ -108,7 +107,7 @@
 
       <section class="task-data">
         <div class="clear-fix">
-        <div style="float: left">
+        <div style="float-left">
             <div class="to-do">
               <form>
                 <label for="tasks"><strong>To-Do List:</strong></label>
@@ -132,7 +131,7 @@
 
       <section class="task-data">
         <div class="clear-fix">
-        <div style="float: right">
+        <div style="float-right">
             <div class="to-go">
               <form>
                 <label for="tasks"><strong>Reminders:</strong></label>
