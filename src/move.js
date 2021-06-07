@@ -48,11 +48,18 @@ function showTemperature(response) {
   let cityElement = document.querySelector("#city");
   let dateElement = document.querySelector("#time");
   let temperatureElement = document.querySelector("#temperature");
+  let iconElement = document.querySelector("#icon");
   let descriptionElement = document.querySelector("#description");
   let windElement = document.querySelector("#wind-speed");
+
   cityElement.innerHTML = response.data.name;
   dateElement.innerHTML = dateAndTime(response.data.dt * 1000);
   temperatureElement.innerHTML = `${temperature}°C`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   descriptionElement.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 }
@@ -67,9 +74,9 @@ function findLocation(city) {
 function handleSubmit(event) {
   event.preventDefault();
 
-  let cityX = document.querySelector("#city");
+  let city = document.querySelector("#city");
   let cityInput = document.querySelector("#search-city");
-  cityX.innerHTML = cityInput.value;
+  city.innerHTML = cityInput.value;
 
   findLocation(cityInput.value);
 }
@@ -79,15 +86,15 @@ function retrievePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
-}
 
-navigator.geolocation.getCurrentPosition(retrievePosition);
+  navigator.geolocation.getCurrentPosition(retrievePosition);
+}
 
 let dateElement = document.querySelector("#time");
 let currentTime = new Date();
 dateElement.innerHTML = dateAndTime(currentTime);
 
-let currentLocation = document.querySelector("button");
+let currentLocation = document.querySelector("#geoLocation");
 currentLocation.addEventListener("click", retrievePosition);
 
 let searchInputForm = document.querySelector("#search-form");
