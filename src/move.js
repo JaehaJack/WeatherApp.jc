@@ -86,7 +86,10 @@ function retrievePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
+}
 
+function getCurrentPosition(event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
@@ -95,9 +98,10 @@ let currentTime = new Date();
 dateElement.innerHTML = dateAndTime(currentTime);
 
 let currentLocation = document.querySelector("#geoLocation");
-currentLocation.addEventListener("click", retrievePosition);
+currentLocation.addEventListener("click", getCurrentPosition);
 
 let searchInputForm = document.querySelector("#search-form");
 searchInputForm.addEventListener("submit", handleSubmit);
 
-findLocation(Calgary);
+let primeDisplay = "Tokyo";
+findLocation(primeDisplay);
