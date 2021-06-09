@@ -62,8 +62,6 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   descriptionElement.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
-
-  console.log(response);
 }
 
 function findLocation(city) {
